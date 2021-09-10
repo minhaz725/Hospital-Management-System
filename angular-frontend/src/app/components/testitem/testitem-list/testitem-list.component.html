@@ -1,0 +1,16 @@
+<div class="card shadow">
+  <div class="card-body">
+    <h4><i class="fas fa-capsules mr-2"></i> Testitem List:</h4>
+    <hr>
+    <ul class="list-group">
+      <li *ngFor="let testitem of testitems | async"
+          class="list-group-item list-group-item-action"
+          (click)="testitemDetails(testitem.id)"
+          style="cursor: pointer;">{{ testitem.testname }} [ {{ testitem.unitprice }} $ ]
+      </li>
+    </ul>
+    <button type="button" class="btn btn-primary float-right mt-2"
+            (click)="addTestitem()"><i class="fas fa-plus"></i> Add new Testitem
+    </button>
+  </div>
+</div>
